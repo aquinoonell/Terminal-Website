@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Onell | Website Porfolio</title>
+</head>
+<body>
+
+    <div id="terminal">
+        <p class="color2">Welcome</p>
+        <p class>
+          <span class="color2">This is Onell's Website Portfolio</span><br>
+            <span class="color2">For the command list, type</span>
+            <span class="command">'help'</span>
+        </p>
+        <a id="before"></a>
+      </div>
+      <div id="command" onclick="$('#texter').focus();">
+        <textarea
+          type="text"
+          id="texter"
+          oninput="typeIt(this)"
+          autofocus>
+        </textarea>
+        <div contenteditable="plaintext-only"></div> 
+        <div id="liner">
+          <span id="typer"></span><b class="cursor" id="cursor">_</b>
+        </div>
+      </div>
+      <script src="Index.js"></script>
+      <script src="commands.js"></script>
+
+</body>
+</html>
