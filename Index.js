@@ -3,10 +3,11 @@ var before = document.getElementById("before");
 var liner = document.getElementById("liner");
 var command = document.getElementById("typer");
 var textarea = document.getElementById("texter");
-var terminal = document.getElementById("terminal");
+let terminal = document.getElementById("terminal");
 
 var cursor = document.getElementById("cursor");
 window.addEventListener("keyup", enterKey);
+
 
 // Fix: Define git properly
 var git = 0;
@@ -30,33 +31,6 @@ function typeIt(from, e) {
     w.innerHTML = tw;
 }
 
-// Fix: Define the content for 'whois', 'what', 'when', 'where' as arrays
-const whois = [
-    "Name: Onell Aquino",
-    "Role: Web Developer",
-    "Location: Earth"
-];
-const what = [
-    "This is a portfolio website showcasing web development projects."
-];
-const when = [
-    "This website was created in 2025."
-];
-const where = [
-    "Hosted at onellwebsite.com"
-];
-
-const help = [
-    "Available commands:",
-    "help - Displays the list of available commands",
-    "whois - Provides information about the user",
-    "what - Provides information about the website",
-    "when - Provides information about the website",
-    "where - Provides information about the website",
-];
-
-textarea.value = "";
-command.innerHTML = textarea.value;
 
 function enterKey(e) {
   if (e.keyCode == 181) {
@@ -85,34 +59,6 @@ function enterKey(e) {
       command.innerHTML = textarea.value;
     }
   }
-}
-
-// Fix: Add the function to process commands
-function commander(cmd) {
-    cmd = cmd.trim().toLowerCase();
-    switch (cmd) {
-        case "help":
-            loopLines(help, "help", 500);
-            break;
-        case "whois":
-            loopLines(whois, "whois", 500);
-            break;
-        case "what":
-            loopLines(what, "what", 500);
-            break;
-        case "when":
-            loopLines(when, "when", 500);
-            break;
-        case "where":
-            loopLines(where, "where", 500);
-            break;
-        case "clear":
-            terminal.innerHTML = "";  // Clear terminal content
-            break;
-        default:
-            addLine("Command not found", "error", 0);  // Show error for unknown commands
-            break;
-    }
 }
 
 // Fix: Function to loop through the lines and display them with a delay
