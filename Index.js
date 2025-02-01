@@ -39,7 +39,7 @@ function enterKey(e) {
     if (e.keyCode == 13) {
       commands.push(command.innerHTML);  // Save the command in history
       git = commands.length;  // Update git to reflect the current position in the command history
-      addLine("onellwebsite.com:~$ " + command.innerHTML, "no-animation", 0);
+      addLine("TerminalWebsiteUnkownUser.com:~$ " + command.innerHTML, "no-animation", 0);
       commander(command.innerHTML.toLowerCase());  // Process the command entered
       command.innerHTML = "";  // Clear the command line after execution
       textarea.value = "";  // Clear the textarea

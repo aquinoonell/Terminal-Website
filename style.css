@@ -1,6 +1,6 @@
 body {
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 5px;
     font-size: 14px;
     line-height: 1.4;
     height: 100vh;
@@ -13,7 +13,7 @@ body {
   }
   ::selection {
     color: #211830;
-    background-color: #519975;
+    background-color: #942498;
   }
   ::-moz-selection {
     color: #211830;
@@ -30,25 +30,22 @@ body {
   /* Cursor Start */
   .cursor {
     font-size: 12px;
-    color: #c5c8c6;
-    /*background-color: #c5c8c6;*/
     position: relative;
-    /*opacity: 1;*/
     height: 1.5em;
     width: 10px;
     max-width: 10px; 
-    transform: translateY(4px);
+    transform: translateY(3px);
     overflow: hidden;
-    /*text-indent: -5px;
-    display: inline-block;*/
     text-decoration: blink;
     animation: blinker 1s linear infinite;
-    content: "|"; /* The blinking cursor */
-    color: #ffffff; /* Cursor color */
-    animation: blink 1s step-end infinite;
     text-decoration: blink;
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background-color: #fcfcfc;
+    animation: blink 1s step-end infinite;
   }
-  @keyframes blinker {
+  @keyframes blink {
     50% {
       opacity: 0;
     }
@@ -90,6 +87,7 @@ body {
   }
   .no-animation {
     animation: typing 0 steps(30, end);
+    color: #ffffff;
   }
   .margin {
     margin-left: 20px;

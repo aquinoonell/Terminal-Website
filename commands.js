@@ -35,6 +35,10 @@ let adminMode = false;  // Set the initial state of the admin panel
 function commander(cmd) {
     cmd = cmd.trim().toLowerCase();
 
+    // Check if the admin mode is active before the command processing
+    // If admin mode is active, check the password entered
+    // If the password is correct, grant access; otherwise, deny access
+    
     if (adminMode) {
         let pass1 = cmd.trim().toLowerCase();
         if (correctPassword === pass1) {
